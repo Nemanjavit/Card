@@ -101,6 +101,9 @@ $myFont: "Roboto", sans-serif;
     cursor: pointer;
     z-index: 10;
     @include transition(all 0.2s ease-in);
+    &:focus-visible {
+      outline: none;
+    }
 
     i {
       pointer-events: none;
@@ -271,6 +274,9 @@ $myFont: "Roboto", sans-serif;
         &__textContent {
           padding-left: 25%;
         }
+      }
+      .card__toggler {
+        top: 70px;
       }
       .responsiveCard__front__imageWrapper {
         width: 17%;

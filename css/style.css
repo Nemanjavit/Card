@@ -2229,6 +2229,10 @@
   transition: all 0.2s ease-in;
 }
 
+.responsiveCard .card__toggler:focus-visible {
+  outline: none;
+}
+
 .responsiveCard .card__toggler i {
   pointer-events: none;
 }
@@ -2398,6 +2402,9 @@
 @media screen and (max-width: 575px) {
   .responsiveCard.opened .moving__header__textContent {
     padding-left: 25%;
+  }
+  .responsiveCard.opened .card__toggler {
+    top: 70px;
   }
   .responsiveCard.opened .responsiveCard__front__imageWrapper {
     width: 17%;
