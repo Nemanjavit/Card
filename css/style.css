@@ -2370,7 +2370,7 @@
 }
 
 .responsiveCard.opened .responsiveCard__back {
-  padding-top: 30%;
+  padding-top: 35%;
   overflow: hidden;
 }
 
@@ -2405,6 +2405,7 @@
   }
   .responsiveCard.opened .card__toggler {
     top: 70px;
+    padding: 15px;
   }
   .responsiveCard.opened .responsiveCard__front__imageWrapper {
     width: 17%;
