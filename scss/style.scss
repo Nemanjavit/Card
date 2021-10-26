@@ -100,6 +100,8 @@ $myFont: "Roboto", sans-serif;
     color: white;
     cursor: pointer;
     z-index: 10;
+    border-color: white;
+
     @include transition(all 0.2s ease-in);
     &:focus-visible {
       outline: none;

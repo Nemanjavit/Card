@@ -2225,6 +2225,7 @@
   color: white;
   cursor: pointer;
   z-index: 10;
+  border-color: white;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
