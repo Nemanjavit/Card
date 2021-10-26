@@ -14,6 +14,7 @@ function openCard(event) {
     const button = selectedCard.getElementsByClassName('card__toggler')
     const icons = selectedCard.getElementsByClassName('social-icon')
 
+
     if (event.target === button[0]) {
         selectedCard.classList.toggle('opened')
         let array = [...icons]
@@ -23,23 +24,21 @@ function openCard(event) {
             delay += 0.1
             el.style.animationDelay = `${delay}s`
         }, null)
+        if (selectedCard.classList.contains('opened')) {
+            button[0].classList.add('spin')
+            setTimeout(() => {
+                button[0].firstElementChild.classList.replace('fa-bars', 'fa-arrow-down')
+                button[0].classList.remove('spin')
+            }, 600)
+        } else {
 
+
+            button[0].classList.add('spin')
+            setTimeout(() => {
+                button[0].firstElementChild.classList.replace('fa-arrow-down', 'fa-bars')
+                button[0].classList.remove('spin')
+            }, 600)
+        }
     }
-    if (selectedCard.classList.contains('opened')) {
-        button[0].classList.add('spin')
-        setTimeout(() => {
-            button[0].firstElementChild.classList.replace('fa-bars', 'fa-arrow-down')
-            button[0].classList.remove('spin')
-        }, 600)
-    } else {
-
-
-        button[0].classList.add('spin')
-        setTimeout(() => {
-            button[0].firstElementChild.classList.replace('fa-arrow-down', 'fa-bars')
-            button[0].classList.remove('spin')
-        }, 600)
-    }
-
 }
 

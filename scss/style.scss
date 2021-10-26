@@ -109,20 +109,18 @@ $myFont: "Roboto", sans-serif;
 
   .moving__header {
     z-index: 10;
-    padding: 15px 10px;
+    padding: 5px 10px;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     overflow-x: visible;
     transform: translateY(-100%);
     font-weight: 400;
     @include transition(all 0.2s ease-in);
-    @media screen and(max-width:768px) {
-      // top: 88.5%;
-    }
+
     &__textContent {
       padding: 10px;
     }
@@ -151,7 +149,7 @@ $myFont: "Roboto", sans-serif;
 
     &__imageWrapper {
       padding-left: 16px;
-      transform: scale(1);
+      width: 100%;
       @include transition(all 0.2s ease-in);
     }
 
@@ -207,7 +205,7 @@ $myFont: "Roboto", sans-serif;
       }
 
       &__textContent {
-        padding-left: 25%;
+        padding-left: 20%;
       }
     }
 
@@ -217,9 +215,9 @@ $myFont: "Roboto", sans-serif;
           z-index: 10;
           position: absolute;
           border-radius: 50%;
-          transform: scale(0.75);
-          right: 76%;
-          bottom: 78%;
+          width: 13%;
+          top: 12px;
+          left: 12px;
           padding: 0px;
         }
         &__image {
@@ -228,10 +226,11 @@ $myFont: "Roboto", sans-serif;
       }
 
       &__back {
-        padding-top: 40%;
+        padding-top: 30%;
         overflow: hidden;
 
         &__text {
+          font-size: 0.9rem;
           opacity: 1;
           @include transition(opacity 0.2s ease-in 0.5s);
         }
@@ -239,12 +238,48 @@ $myFont: "Roboto", sans-serif;
     }
 
     .card__toggler {
-      top: 18%;
+      top: 15%;
       border-color: white;
     }
   }
 }
+@media screen and(max-width: 991px) {
+}
+@media screen and(max-width: 767px) {
+  .responsiveCard {
+    .moving__header {
+      padding: 20px 10px;
+      line-height: 2rem;
+    }
 
+    .card__toggler {
+      padding: 20px;
+    }
+
+    &.opened {
+      .card__toggler {
+        top: 80px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:575px) {
+  .responsiveCard {
+    &.opened {
+      .moving__header {
+        &__textContent {
+          padding-left: 25%;
+        }
+      }
+      .responsiveCard__front__imageWrapper {
+        width: 17%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 475px) {
+}
 @each $color_name, $color in $colors {
   @each $color_type, $color_value in $color {
     .#{$color_name} {

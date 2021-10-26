@@ -2235,13 +2235,13 @@
 
 .responsiveCard .moving__header {
   z-index: 10;
-  padding: 15px 10px;
+  padding: 5px 10px;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   overflow-x: visible;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -2278,8 +2278,7 @@
 
 .responsiveCard__front__imageWrapper {
   padding-left: 16px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  width: 100%;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
@@ -2349,17 +2348,16 @@
 }
 
 .responsiveCard.opened .moving__header__textContent {
-  padding-left: 25%;
+  padding-left: 20%;
 }
 
 .responsiveCard.opened .responsiveCard__front__imageWrapper {
   z-index: 10;
   position: absolute;
   border-radius: 50%;
-  -webkit-transform: scale(0.75);
-          transform: scale(0.75);
-  right: 76%;
-  bottom: 78%;
+  width: 13%;
+  top: 12px;
+  left: 12px;
   padding: 0px;
 }
 
@@ -2368,19 +2366,42 @@
 }
 
 .responsiveCard.opened .responsiveCard__back {
-  padding-top: 40%;
+  padding-top: 30%;
   overflow: hidden;
 }
 
 .responsiveCard.opened .responsiveCard__back__text {
+  font-size: 0.9rem;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-in 0.5s;
   transition: opacity 0.2s ease-in 0.5s;
 }
 
 .responsiveCard.opened .card__toggler {
-  top: 18%;
+  top: 15%;
   border-color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .responsiveCard .moving__header {
+    padding: 20px 10px;
+    line-height: 2rem;
+  }
+  .responsiveCard .card__toggler {
+    padding: 20px;
+  }
+  .responsiveCard.opened .card__toggler {
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .responsiveCard.opened .moving__header__textContent {
+    padding-left: 25%;
+  }
+  .responsiveCard.opened .responsiveCard__front__imageWrapper {
+    width: 17%;
+  }
 }
 
 .materialize-red .card__toggler {
