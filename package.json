@@ -1,0 +1,24 @@
+{
+  "name": "card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "materialize-css": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nemanjavit/Card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nemanjavit/Card/issues"
+  },
+  "homepage": "https://github.com/Nemanjavit/Card"
+}
